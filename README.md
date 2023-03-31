@@ -19,6 +19,10 @@
 
 :pushpin:书中代码放在[github](https://github.com/QSanSi/LearnPython3theHardWay)上了.
 
+- [Python官方文档](https://docs.python.org/zh-cn/3/index.html)
+- [Python 语言参考手册](https://docs.python.org/zh-cn/3/reference/index.html)
+- [Python基础教程，Python入门教程（非常详细）](http://c.biancheng.net/python/)
+
 ## 习题1 第一个程序
 
 ```python
@@ -37,7 +41,7 @@ print("This will run.") # Anything after "#" is ignored by python.
 
 ## 习题3 数字和数学计算
 
-- +: 加号; -: 减号; *: 乘; /: 除(得浮点数商); //: 除(得整数商)
+- +: 加号; -: 减号; *: 乘; /: 除(得浮点数商); //: 除(得整数商); **: 幂运算
 - %: ==取模==
   - C/C++, Java为**取余**, Python为**取模**
   - **区别:**
@@ -49,10 +53,11 @@ print("This will run.") # Anything after "#" is ignored by python.
     > 求余时：r = a - c \* b = -7 - (-1) \* 4 =-3
   - **归纳：** 当a和b正负号一致时，求模运算和求余运算所得的c的值一致，因此结果一致。当正负号不一致时，结果不一样。
 - <: 小于; \>: 大于; <=: 小于等于; >=: 大于等于
+- 浮点数四舍五入`round() 函数`, 例: `round(3.1415)`
 
 ## 习题4 变量和命名
 
-不用显式指定数据类型, 命名一个变量定义赋值直接用. 变量名以"字母"或"_"开头
+- 不用显式指定数据类型, 命名一个变量定义赋值直接用. 变量名以"字母"或"_"开头
 
 ```python
 cars = 100
@@ -61,3 +66,53 @@ _drivers = 30
 
 ## 习题5 更多的变量和打印
 
+- **格式化字符串(f-string)** 字符串以f开头, 变量放在{}中。
+  
+```python
+my_name = 'Zed A. Shaw'
+print(f"Let's talk about {my_name}.")
+# Let's talk about Zed A. Shaw.
+```
+
+## 习题6 字符串和文本
+
+- 字符串以`" "`、`' '`、`''' '''`或`""" """`标识, 三连的引号可以多行表示字符串。
+- 拼接字符串
+
+```python
+a = "kg"
+b = "nb"
+print(a + b)
+# kgnb
+```
+
+- ==重点：== 格式化字符串[f-string拓展](https://www.cnblogs.com/qsswxm/p/17263280.html)。
+
+## 习题7 更多打印
+
+- 字符串后`*`加数字(n)可以重复该字符串n次。
+
+```python
+print("." * 10)
+# ..........
+```
+  
+- `end`可以将`print()`函数末尾给字符串添加的换行符替换为指定字符。
+  
+```python
+print("ABC")
+print("DEF")
+# ABC
+# DEF
+print("ABC", end='')
+print("DEF")
+# ABCDEF
+print("ABC", end=' ')
+print("DEF")
+# ABC DEF
+print("ABC", end='123')
+print("DEF")
+# ABC123DEF
+```
+
+## 习题8 打印，打印
