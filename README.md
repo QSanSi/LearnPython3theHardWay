@@ -116,3 +116,72 @@ print("DEF")
 ```
 
 ## 习题8 打印，打印
+
+- `format()`函数匹配字符串中的`{}`，`{}`定义在字符串前也可以。
+
+```python
+formatter = "{} {} {} {}"
+print(formatter.format(1, "two", True, formatter))
+# 1 two True {} {} {} {}
+```
+
+## 习题9 打印，打印，打印
+
+本章没有特别的要点，复习一下`'''`和`"""`可以用于多行字符串。
+
+## 习题10 那是什么
+
+略，讲转义字符的。
+
+- 转义序列
+
+| 转义字符 | 功能 |
+| :--- | :--- |
+|`\\`|反斜杠(\)|
+|`\'`|单引号(')|
+|`\"`|双引号(")|
+|`\a`|ASCII响铃符(BEL)|
+|`\b`|ASCII退格符(BS)|
+|`\f`|ASCII换页符(FF)|
+|`\n`|ASCII换行符(LF)|
+|`\N{name}`|Unicode数据库中的字符名, 其中name是它的名字, 仅Unicode适用|
+|`\r`|ASCII回车符(CR)|
+|`\t`|ASCII水平制表符(TAB)|
+|`\uxxxx`|值为16位十六进制xxxx的字符|
+|`\Uxxxxxxxx`|值为32位十六进制xxxxxxxx的字符|
+|`\v`|ASCII垂直制表符(VT)|
+|`\ooo`|值为八进制值ooo的字符|
+|`\xhh`|值为十六进制值hh的字符|
+
+## 习题11 提问
+
+键盘输入`input()`函数。
+
+```python
+print("How old are you?", end=' ')
+age = input()
+```
+
+## 习题12 提示别人
+
+可以将提示语句放入`input()`函数的括号中。
+
+```python
+age = input("How old are you? ")
+```
+
+- pydoc是python自带的一个文档生成工具，使用pydoc可以很方便的查看类和方法结构: [pydoc用法](https://www.cnblogs.com/meitian/p/6704488.html)
+
+## 习题13 参数、解包和变量
+
+`argv`即 *参数变量* (argument variable)，通过导入 *模块(库)* 使用其功能，用于参数在用户执行命令时就要输入的情况。解包将各个参数赋值给变量，命令行参数是**字符串类型**。
+
+```python
+from sys import argv
+script, first, second, third = argv
+# 命令行：python ex13.py one two three four
+print(f"output:{script}, {first}, {second}, {third}")
+# output:ex13.py, one, two, three
+```
+
+## 习题14 提示和传递
